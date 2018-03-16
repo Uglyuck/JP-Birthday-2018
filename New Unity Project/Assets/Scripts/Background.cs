@@ -14,9 +14,9 @@ public class Background : Stopable
 	void Update () 
 	{
 		Vector3 NewPosition = this.transform.position;
-		if (this.transform.position.x < -39)	
+		if (this.transform.position.x < -25) //39)	
 		{
-			NewPosition.x += 72; // 36;	 //'33' -39
+			NewPosition.x += 50; //72; // 36;	 //'33' -39
 		}
 		NewPosition.x -= (speed * Time.deltaTime);
 		this.transform.position = NewPosition;
