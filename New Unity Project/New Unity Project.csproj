@@ -302,12 +302,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Background.cs" />
     <Compile Include="Assets\Scripts\BadItem.cs" />
-    <Compile Include="Assets\Scripts\ClickContinue.cs" />
     <Compile Include="Assets\Scripts\FullGame.cs" />
     <Compile Include="Assets\Scripts\LevelControl.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Stopable.cs" />
-    <Compile Include="Assets\Scripts\TestScript.cs" />
+    <Compile Include="Assets\Scripts\ToGift.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

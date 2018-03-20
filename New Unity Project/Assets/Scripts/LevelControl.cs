@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelControl : MonoBehaviour {
-
-	//public string NextLevel = "";
+public class LevelControl : MonoBehaviour 
+{
+	// Could have made this static. But it's light and I wanted to get it out quickly.
 	public void LoadLevel(string name)
 	{
 		print("Loading level:" + name);

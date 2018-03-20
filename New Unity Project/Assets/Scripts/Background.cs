@@ -2,23 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// includes stopable incase I wanted to stop everything at any point of time.
 public class Background : Stopable
 {
-	//private float speed = 6;
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
+	// Moving the object over each frame to create animation.
 	void Update () 
 	{
 		Vector3 NewPosition = this.transform.position;
-		if (this.transform.position.x < -25) //39)	
+		if (NewPosition.x < -25)	// If it is beyond the screen.....
 		{
-			NewPosition.x += 50; //72; // 36;	 //'33' -39
+			NewPosition.x += 50;	//Jump over to the end!
 		}
-		NewPosition.x -= (speed * Time.deltaTime);
-		this.transform.position = NewPosition;
+		NewPosition.x -= (speed * Time.deltaTime);	//Move the object this much
+		this.transform.position = NewPosition;		//Move it.
 	}
 }
