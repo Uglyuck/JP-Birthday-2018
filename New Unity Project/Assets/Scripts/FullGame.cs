@@ -39,22 +39,59 @@ public class FullGame : MonoBehaviour
 	public float TimeRemaining;		//Ajustable in the object in the Interface.
 
 	public Text TimerSeconds;		//This is for the display 
-	public Text TimerMiliSeconds;	//This is for the display
+	public Text TimerMiliSeconds;   //This is for the display
+
+
+	private float deltaTime;
+	private float TotalClock;
+	private int Cycles;
+	private System.Diagnostics.Stopwatch timer;
+	private float TotalTime = 0;
+
 	// Use this for initialization
 	void Start () 
 	{
+		timer = System.Diagnostics.Stopwatch.StartNew();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		TimeRemaining -= Time.deltaTime;
+
+		deltaTime = Time.deltaTime;
+		TimeRemaining -= deltaTime;
 		if (TimeRemaining <= 0)
 		{
 			win();
 		}
 		TimerSeconds.text = Mathf.Floor(TimeRemaining).ToString("00"); // Round down then cast
 		TimerMiliSeconds.text = ((TimeRemaining % 1) * 100).ToString("00"); // Mod 1 to keep it at under 1 second then multiply for miliseconds.
+
+
+		// Calc Performance;
+		TotalClock += deltaTime;
+		//Cycles++;
+		if (TotalClock > 5)
+		{
+			print("Average Cycle time:" + TotalClock / Cycles);
+			Cycles = 0;
+			TotalClock = 0;
+		}
+		if (timer.IsRunning)
+		{
+			timer.Stop();
+			System.TimeSpan ts = timer.Elapsed;
+			TotalTime += timer.ElapsedTicks;
+			Cycles++;
+			if (Cycles % 120 == 0)
+			{
+				print("Average Ticks In WholeThing:" + TotalTime / Cycles);
+				TotalTime = 0;
+				Cycles = 0;
+			}
+			timer = System.Diagnostics.Stopwatch.StartNew();
+		}
+
 	}
 	void win()
 	{

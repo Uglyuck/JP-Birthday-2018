@@ -303,6 +303,7 @@
     <Compile Include="Assets\Scripts\Background.cs" />
     <Compile Include="Assets\Scripts\BadItem.cs" />
     <Compile Include="Assets\Scripts\FullGame.cs" />
+    <Compile Include="Assets\Scripts\GameLoop.cs" />
     <Compile Include="Assets\Scripts\LevelControl.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Stopable.cs" />

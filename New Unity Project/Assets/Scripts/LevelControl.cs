@@ -5,6 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelControl : MonoBehaviour 
 {
+	public void Start()
+	{	
+		/*
+		unsafe
+		{
+			print(sizeof(ameObject.transform));
+		}
+		*/
+	}
 	// Could have made this static. But it's light and I wanted to get it out quickly.
 	public void LoadLevel(string name)
 	{
