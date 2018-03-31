@@ -302,6 +302,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Background.cs" />
     <Compile Include="Assets\Scripts\BadItem.cs" />
+    <Compile Include="Assets\Scripts\DataDrivenV2.cs" />
+    <Compile Include="Assets\Scripts\DataDrivenV3.cs" />
+    <Compile Include="Assets\Scripts\DataDrivenV4.cs" />
     <Compile Include="Assets\Scripts\FullGame.cs" />
     <Compile Include="Assets\Scripts\GameLoop.cs" />
     <Compile Include="Assets\Scripts\LevelControl.cs" />

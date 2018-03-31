@@ -598,8 +598,8 @@ GameObject:
   - component: {fileID: 957077151}
   - component: {fileID: 957077150}
   - component: {fileID: 957077149}
-  - component: {fileID: 957077148}
   - component: {fileID: 957077152}
+  - component: {fileID: 957077148}
   m_Layer: 0
   m_Name: GamePlay
   m_TagString: Untagged
@@ -615,9 +615,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 957077147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6847264456950ed46b78eba978724541, type: 3}
+  m_Script: {fileID: 11500000, guid: ba556e4222da73b49ba92c69499b91e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterHitValue: 0
   ObjectSpeed: 15
   MainCharacter: {fileID: 0}
 --- !u!114 &957077149

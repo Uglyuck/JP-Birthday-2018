@@ -64,8 +64,8 @@ public class FullGame : MonoBehaviour
 		{
 			win();
 		}
-		TimerSeconds.text = Mathf.Floor(TimeRemaining).ToString("00"); // Round down then cast
-		TimerMiliSeconds.text = ((TimeRemaining % 1) * 100).ToString("00"); // Mod 1 to keep it at under 1 second then multiply for miliseconds.
+		TimerSeconds.text = (TimeRemaining + .5).ToString("00"); // Round down then cast
+		TimerMiliSeconds.text = (((TimeRemaining % 1) * 100) % 99).ToString("00"); // Mod 1 to keep it at under 1 second then multiply for miliseconds.
 
 
 		// Calc Performance;

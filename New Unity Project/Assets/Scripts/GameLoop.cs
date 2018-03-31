@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class GameLoop : MonoBehaviour 
 {
+	//Transform.Translate = 0.011ms 1.69ms 1500 instances  
+	//		MoveObjects = 2.69ms    (2 instances)
+	//		GetTransform = 0.002ms  .521ms 1003 instances
+	//	Biggest issue WasHit_MoveOBjects: avg 1.6ms
+
+	// Worst out of small test:
+
+	// Frame: 245: 2.84ms
+	//		MoveObjects = 2.81ms (2 instances)
+	//		TransformTranslate = 1.89ms total (1500 instances)
+	//		GetTransform = 0.373ms total 1003 instances 
+
+
+
+
 	private GameObject[] Poops = new GameObject[50];
 	private int Poops_LastActive = 0;
 
@@ -167,6 +182,7 @@ public class GameLoop : MonoBehaviour
 
 	}
 
+		
 
 	bool wasHit_MoveObjects(float CharacterHitValue, float deltaTime, GameObject[] ScreenBoards, float ScreenBoards_LastActive)
 	{
